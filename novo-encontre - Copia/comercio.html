@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" type="image/png" sizes="42x42" href="./img/web_hi_res_512.png">
+    <title>encontre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/comercio.css" />
+</head>
+<body>
+        <!-- Header -->
+        <header>
+            <div class="header-logo">
+              <img id="logo" src="./img/web_hi_res_512.png" alt="Logo">
+              <span class="header-text">Encontre</span>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">
+              <i class="fas fa-bars"></i>
+            </button>
+            <nav id="nav">
+              <a href="index.html">ver novos lugares</a>
+            </nav>
+        </header>
+        <div class="comercio-container" id="comercioContainer">
+            <p class="loading-message">Carregando detalhes do comércio...</p>
+            <!-- Botão de impressão -->
+        </div>
+        
+  <!-- Footer -->
+  <footer style="background: linear-gradient(135deg, rgba(0, 119, 255, 0.607), rgb(0, 0, 0)); color: white; padding: 40px 20px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+      <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+        <div style="display: flex; align-items: center;">
+          <img src="./img/web_hi_res_512.png" alt="Logo" style="height: 30px; margin-right: 10px;">
+          <span style="font-weight: 300; font-size: 1.2em;">Encontre Tecnologia</span>
+        </div>
+      </div>
+      <hr style="width: 100%; border: 0.5px solid white; margin: 20px 0;">
+      <div style="width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;">
+        <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+          <strong>SOBRE NÓS</strong>
+          <a href="sobre.html" style="color: white; text-decoration: none; margin-bottom: 5px;">Sobre Nós</a>
+        </div>
+        <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+          <strong>PRECISA DE AJUDA?</strong>
+          <a href="ajuda.html" style="color: white; text-decoration: none; margin-bottom: 5px;">Ajuda</a>
+        </div>
+        <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+          <strong>LEGAL</strong>
+          <a href="termos.html" style="color: white; text-decoration: none; margin-bottom: 5px;">Termos de uso</a>
+          <a href="privacidade.html" style="color: white; text-decoration: none; margin-bottom: 5px;">Política de privacidade</a>
+        </div>
+        <div style="display: flex; flex-direction: column; align-items: flex-end; margin-bottom: 20px;">
+        </div>
+      </div>
+      <hr style="width: 100%; border: 0.5px solid white; margin: 20px 0;">
+      <p style="font-size: 0.9em;">&copy; 2025 The Encontre Tecnologia Company. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="./js/comercio.js" defer></script>
+
+</body>
+</html>
