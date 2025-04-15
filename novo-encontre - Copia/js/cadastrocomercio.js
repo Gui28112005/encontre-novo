@@ -4,7 +4,6 @@ function updatePreview() {
   const cidade = document.getElementById("cidade").value;
   const estado = document.getElementById("estado").value;
   const telefone = document.getElementById("telefone").value;
-  const descricao = document.getElementById("descricao").value;
   const linkCardapio = document.getElementById("link_cardapio").value;
   const linkFacebook = document.getElementById("link_facebook").value;
   const linkInstagram = document.getElementById("link_instagram").value;
@@ -19,8 +18,6 @@ function updatePreview() {
     (cidade || "Cidade") + " / " + (estado || "Estado");
   document.getElementById("previewTelefone").textContent =
     telefone || "Telefone";
-  document.getElementById("previewDescricao").textContent =
-    descricao || "Descrição do comércio";
 
   if (imagemCapa) {
     document.getElementById("previewImagem").src = imagemCapa;
