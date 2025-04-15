@@ -1,99 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="42x42" href="./img/web_hi_res_512.png">
-  <title>encontre</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/sobre.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1183660196592298"
-     crossorigin="anonymous"></script>
-  <script src="js/sobre.js" defer></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="42x42" href="./img/web_hi_res_512.png" />
+    <title>Sobre Nós - Encontre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/sobre.css" />
+    <script src="./js/sobre.js" defer></script>
+
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="header-logo">
-      <img src="./img/web_hi_res_512.png" alt="Logo">
-      <span>Encontre</span>
-    </div>
-    <button class="menu-toggle" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </button>
-    <nav id="nav">
-      <a href="index.html">Home</a>
-      <a href="termos.html">Termos de Uso</a>
-      <a href="privacidade.html">Política de Privacidade</a>
-      <a href="contato.html">Contato</a>
-    </nav>
-  </header>
+    <header>
+        <div class="header-logo">
+            <img id="logo" src="./img/web_hi_res_512.png" alt="Logo Encontre" />
+            <span class="header-text">Encontre</span>
+        </div>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav">
+            <a href="index.html">Início</a>
+            <a href="termos.html">Termos de Uso</a>
+            <a href="privacidade.html">Política de Privacidade</a>
+        </nav>
+    </header>
 
-  <div class="container">
-    <h1>A arte de descobrir o novo 🔎🌎</h1>
-    <p>O Encontre é uma plataforma inovadora para conectar usuários a estabelecimentos comerciais em São Carlos. Facilitamos a descoberta de novos lugares e ajudamos a tomar decisões informadas.</p>
-    
-    <div class="info">
-      <div>
-        <i class="fas fa-map-marked-alt"></i>
-        <h3>🌎 Localização Inteligente</h3>
-        <p>Mapa interativo para encontrar lugares próximos com avaliações reais.</p>
-      </div>
-      <div>
-        <i class="fas fa-coins"></i>
-        <h3>💰 Economia</h3>
-        <p>Compare preços de postos de gasolina e restaurantes para economizar mais.</p>
-      </div>
-      <div>
-        <i class="fas fa-exclamation-triangle"></i>
-        <h3>⚠️ Segurança</h3>
-        <p>Marcação de áreas perigosas e alertas comunitários.</p>
-      </div>
-      <div>
-        <i class="fas fa-comments"></i>
-        <h3>💬 Comunidade</h3>
-        <p>Feedbacks e recomendações de usuários em tempo real.</p>
-      </div>
-      <!-- Nova caixa de Contato -->
-      <div>
-        <i class="fas fa-envelope"></i>
-        <h3>Nosso Contato:</h3>
-        <p><a href="mailto:guilhermedevsistemas@gmail.com" style="color: var(--dark-gray); text-decoration: none;">email: guilhermedevsistemas@gmail.com</a></p>
-        <h3>⌚ Seg a Sex Horário comercial</h3>
-    </div>
-    </div>
-  </div>
+    <main class="container">
+        <h1>Sobre-nos</h1>
+        <p>
+          Fundado em 2024 o encontre tem o propósito é facilitar a descoberta de estabelecimentos, serviços e produtos da cidade, incentivando o consumo local de forma prática, segura e voltada para o fortalecimento da comunidade. Valorizamos o desenvolvimento regional e buscamos impulsionar a economia sãocarlense com tecnologia e acessibilidade.
 
-  <!-- Footer -->
-  <footer>
-    <div style="width: 100%; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
-      <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
-        <div style="display: flex; align-items: center;">
-          <img src="./img/web_hi_res_512.png" alt="Logo" style="height: 30px; margin-right: 10px;">
-          <span style="font-weight: 300; font-size: 1.2em;">Encontre Tecnologia</span>
-        </div>
-      </div>
-      <hr style="width: 100%; border: 0.5px solid white; margin: 20px 0;">
-      <div style="width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap;">
-        <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
-          <strong>SOBRE NÓS</strong>
-          <a href="sobre.html" style="color: white; text-decoration: none; margin-bottom: 5px;">Nossa empresa</a>
-        </div>
-        <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
-          <strong>PRECISA DE AJUDA?</strong>
-          <a href="ajuda.html" style="color: white; text-decoration: none; margin-bottom: 5px;">Perguntas frequêntes</a>
-        </div>
-        <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
-          <strong>LEGAL</strong>
-          <a href="termos.html" style="color: white; text-decoration: none; margin-bottom: 5px;">Termos de uso</a>
-          <a href="privacidade.html" style="color: white; text-decoration: none; margin-bottom: 5px;">Política de privacidade</a>
-        </div>
-      </div>
-      <hr style="width: 100%; border: 0.5px solid white; margin: 20px 0;">
-      <p style="font-size: 0.9em;">&copy; 2025 The Encontre Tecnologia Company. Todos os direitos reservados.</p>
-    </div>
-  </footer>
 
+        </p>
+
+        <section class="info">
+            <i class="fas fa-bullseye"></i>
+            <h3>Nossa Visão</h3>
+            <p>
+                Ser a principal referência digital para os moradores de São Carlos encontrarem tudo o que precisam localmente, impulsionando o crescimento dos negócios e fortalecendo os laços comunitários.
+            </p>
+        </section>
+
+        <section class="info">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Nossa Proposta de Valor</h3>
+            <p>
+                Oferecemos uma experiência intuitiva e eficiente para que você explore o melhor de São Carlos. Seja para encontrar um restaurante aconchegante, um serviço especializado ou aquela loja única, o <strong>Encontre</strong> é o seu ponto de partida. Valorizamos a praticidade, a segurança das informações e a colaboração entre usuários e comerciantes.
+            </p>
+        </section>
+
+        <section class="info">
+            <i class="fas fa-envelope"></i>
+            <h3>Entre em Contato</h3>
+            <p>
+                Para dúvidas, sugestões ou parcerias, entre em contato conosco através do e-mail:
+                <a href="mailto:guilhermedevsistemas@gmail.com">guilhermedevsistemas@gmail.com</a>
+            </p>
+            <h4><i class="far fa-clock"></i> Atendimento: Segunda a Sexta, das 8h às 18h</h4>
+        </section>
+    </main>
+
+    <section class="container" style="margin-top: 40px;">
+        <h2><i class="fas fa-users"></i> Nossa Equipe</h2>
+        <p>
+            O <strong>Encontre</strong> é fruto da visão e dedicação de profissionais apaixonados por tecnologia e pelo desenvolvimento da nossa comunidade.
+        </p>
+        <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 0.8rem;">
+                <strong>Hiasmin Lorrane Cardoso</strong> – <span style="color: var(--secondary-color);">fundadora do encontre</span>
+            </li>
+            <li>
+                <strong>Guilherme Lopes Rocetom</strong> – <span style="color: var(--secondary-color);">fundador do encontre</span>
+            </li>
+        </ul>
+        <p>
+        <p>
+            Acreditamos no poder da tecnologia para transformar a maneira como interagimos com o nosso entorno e estamos comprometidos em construir uma plataforma que beneficie a todos em São Carlos.
+        </p>
+      </p>
+    </section>
+
+    <footer>
+        <div style="width: 100%; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; align-items: center;">
+                    <img src="./img/web_hi_res_512.png" alt="Logo Encontre" style="height: 30px; margin-right: 10px;" />
+                    <span style="font-weight: 300; font-size: 1.2em;">Encontre Tecnologia</span>
+                </div>
+            </div>
+            <hr style="width: 100%; border: 0.5px solid rgba(255, 255, 255, 0.2); margin: 20px 0;" />
+            <div style="width: 100%; display: flex; justify-content: space-around; flex-wrap: wrap;">
+                <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+                    <strong>SOBRE NÓS</strong>
+                    <a href="sobre.html">Nossa empresa</a>
+                </div>
+                <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+                    <strong>PRECISA DE AJUDA?</strong>
+                    <a href="ajuda.html">Central de Ajuda</a>
+                </div>
+                <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+                    <strong>LEGAL</strong>
+                    <a href="termos.html">Termos de Uso</a>
+                    <a href="privacidade.html">Política de Privacidade</a>
+                </div>
+            </div>
+            <p style="font-size: 0.9em; color: rgba(255, 255, 255, 0.8); margin-top: 1rem;">
+                &copy; 2025 Encontre Tecnologia. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
 </body>
 </html>
