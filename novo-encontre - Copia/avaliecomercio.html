@@ -9,28 +9,41 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" as="style">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1183660196592298"
-     crossorigin="anonymous"></script>
+
   <script src="./js/comunidade.js" defer></script>
   <link rel="stylesheet" href="./css/avaliacao.css" />
 </head>
 <body>
-  <!-- Header fixo -->
-  <div class="header">
-    <div class="header-logo">
-      <img src="./img/web_hi_res_512.png" alt="Logo" class="header-icon" />
-      <span class="header-text">Encontre</span>
-    </div>
-    <!-- Botão de menu no canto direito -->
-    <button class="menu-toggle" onclick="toggleMenu()">
-      <i class="fas fa-bars"></i>
-    </button>
-    <!-- Botões de navegação (dropdown em mobile) -->
-    <div class="header-buttons">
-      <button onclick="window.location.href='index.html'">Início</button>
-      <button onclick="window.location.href='buscaravaliacao.html'">Avaliações feitas</button>
-      <button onclick="window.location.href='privacidade.html'">Privacidade</button>
-    </div>
+        <!-- Header -->
+        <!-- <header>
+          <div class="header-logo">
+            <img id="logo" src="./img/web_hi_res_512.png" alt="Logo">
+          </div>
+          <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <nav id="nav">
+            <button onclick="window.location.href='index.html'">Início</button>
+            <button onclick="window.location.href='buscaravaliacao.html'">Avaliações feitas</button>
+            <button onclick="window.location.href='privacidade.html'">Privacidade</button>
+          </nav>
+      </header> -->
+
+              <!-- Header -->
+              <header>
+                <div class="header-logo">
+                  <img id="logo" src="./img/web_hi_res_512.png" alt="Logo">
+                  <span class="header-text">Encontre</span>
+                </div>
+                <button class="menu-toggle" onclick="toggleMenu()">
+                  <i class="fas fa-bars"></i>
+                </button>
+                <nav id="nav">
+                  <a href="index.html">voltar para o inicio</a>
+                  <a href="buscaravaliacao.html">Avaliações feitas</a>
+                  <a href="privacidade.html">Privacidade</a>
+                </nav>
+            </header>
   </div>
   <!-- Conteúdo principal -->
   <div class="content">
@@ -83,7 +96,7 @@
           <label for="horario_pico">Horário de Pico:</label>
           <input type="text" id="horario_pico" required />
         </div>
-        <button type="submit">Enviar Avaliação</button>
+        <button type="submit" class="buttonenviar">Enviar Avaliação</button>
       </form>
       <div class="message" id="message"></div>
     </div>
@@ -118,5 +131,9 @@
       <p style="font-size: 0.9em;">&copy; 2025 The Encontre Tecnologia Company. Todos os direitos reservados.</p>
     </div>
   </footer>
+  <footer style="background: linear-gradient(135deg, rgba(0, 60, 128, 0.607), rgb(63, 63, 63)); padding: 16px; text-align: center; font-size: 14px; color: #fff; border: none; box-shadow: none;">
+    <p style="text-align: center; font-size: 14px; color: #ffffff; margin-top: 20px;">
+      NOTA: cadastre sempre informações corretas para ajudar a comunidade.
+    </p>
 </body>
 </html>
