@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>encontre</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="42x42" href="./img/web_hi_res_512.png">
+  <link rel="stylesheet" href="./css/advinha.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="header-logo">
+      <img id="logo" src="./img/web_hi_res_512.png" alt="Logo">
+      <span class="header-text">Encontre</span>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+    <nav id="nav">
+      <a href="index.html">voltar para o inicio</a>
+    </nav>
+</header>
+  <h1> Encontre advinha 🎩</h1>
+  <p>Deixe-me adivinhar o que você está a fim de fazer hoje. Responda se estou certo ou não!</p>
+
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="question-box" id="questionBox">
+    <p id="questionText">Tenho a impressão de que você está morrendo de fome. Estou certo?</p>
+    <div id="buttonContainer">
+      <!-- Botões serão inseridos dinamicamente -->
+    </div>
+  </div>
+
+  <div id="result"></div>
+
+  <footer>
+    <div style="width: 100%; margin: 10 auto; display: flex; flex-direction: column; align-items: center;">
+        <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center;">
+                <img src="./img/web_hi_res_512.png" alt="Logo Encontre" style="height: 30px; margin-right: 10px;" />
+                <span style="font-weight: 300; font-size: 1.2em;">Encontre Tecnologia</span>
+            </div>
+        </div>
+        <hr style="width: 100%; border: 0.5px solid rgba(255, 255, 255, 0.2); margin: 20px 0;" />
+        <div style="width: 100%; display: flex; justify-content: space-around; flex-wrap: wrap;">
+            <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+                <strong>SOBRE NÓS</strong>
+                <a href="sobre.html">Nossa empresa</a>
+            </div>
+            <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+                <strong>PRECISA DE AJUDA?</strong>
+                <a href="ajuda.html">Central de Ajuda</a>
+            </div>
+            <div style="display: flex; flex-direction: column; margin-bottom: 20px;">
+                <strong>LEGAL</strong>
+                <a href="termos.html">Termos de Uso</a>
+                <a href="privacidade.html">Política de Privacidade</a>
+            </div>
+        </div>
+        <p style="font-size: 0.9em; color: rgba(255, 255, 255, 0.8); margin-top: 1rem;">
+            &copy; 2025 Encontre Tecnologia. Todos os direitos reservados.
+        </p>
+    </div>
+</footer>
+
+<script src="./js/advinha.js"></script>
+
+</body>
+</html>
