@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" sizes="42x42" href="./img/web_hi_res_512.png">
+  <title>encontre</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/login.css" />
+</head>
+<body>
+  <header>
+    <div class="header-text">Encontre meu Negócio 🏬</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="header-buttons">
+      <button onclick="window.location.href='index.html'">Home</button>
+      <button onclick="window.location.href='privacidade.html'">Privacidade</button>
+    </div>
+  </header>
+
+  <main class="login-container">
+    <img src="./img/web_hi_res_512.png" alt="Logo Encontre" class="logo" />
+    <h2>Login</h2>
+    <div id="errorMessage" class="error-message"></div>
+    <form id="loginForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="senha" placeholder="Senha" required />
+      <button type="submit">Entrar</button>
+      <p id="loading" class="loading">Autenticando...</p>
+    </form>
+    <div class="whatsapp-link">
+        <p>ou</p>
+        <p>cadastre seu negocio e seja visto!</p>
+      <a href="https://wa.me/5516994392545?text=Olá!%20Gostaria%20de%20criar%20uma%20conta%20no%20Encontre%20meu%20Negócio." target="_blank">
+        <button type="button">Chame no WhatsApp</button>
+      </a>
+    </div>
+  </main>
+
+  <script src="./js/login.js"></script>
+</body>
+</html>
