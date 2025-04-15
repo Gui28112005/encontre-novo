@@ -1,115 +1,22 @@
 
-/* Reset e estilos básicos */
-* {
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #ffffff, #ffffff);
-  color: #2d3748;
-}
-/* Header aprimorado */
-.header {
-  width: 100%;
-  background: linear-gradient(135deg, rgba(0, 119, 255, 0.65), rgba(0, 0, 0, 0.85));
-  backdrop-filter: blur(6px);
-  padding: 15px 40px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute; /* Modificado para 'absolute' inicialmente */
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-}
-/* Estado escondido */
-.header.hide-header {
-  transform: translateY(-100%);
-  opacity: 0;
-}
-/* Estado fixo quando não está escondido */
-.header.show-header {
-  position: fixed; /* Volta para fixed quando o header for mostrado */
-  transform: translateY(0); /* Reposiciona no topo */
-  opacity: 1;
-}
-/* Logo e Nome */
-.header-logo {
-  display: flex;
-  align-items: center;
-}
-.header-icon {
-  width: 50px;
-  height: auto;
-  margin-right: 12px;
-}
-.header-text {
-  font-size: 1.2em;
-  font-weight: 300;
-  color: #ffffff;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-/* Botões de Navegação para desktop */
-.header-buttons {
-  display: flex;
-  gap: 20px;
-}
-.header-buttons button {
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  padding: 10px 25px;
-  border-radius: 25px;
-  font-size: 1em;
-  color: #ffffff;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-.header-buttons button:hover {
-  background-color: #ffffff;
-  color: #000000;
-  transform: translateY(-3px);
-}
-/* Botão de Menu (Hamburger) - inicialmente oculto */
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  font-size: 1.2em;
-  left: -20;
-  cursor: pointer;
-}
-/* Responsividade - telas até 768px */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
+  flex-direction: column;
   }
-  /* Esconde os botões de navegação e os posiciona como dropdown */
-  .header-buttons {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 10px 0;
+  
+  body {
+  flex: 1;
   }
-  /* Quando a classe 'show' for adicionada, exibe o menu */
-  .header-buttons.show {
-    display: flex;
+  
+  main {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  
   }
-  .header-buttons button {
-    margin: 5px auto;
-    width: 90%;
-  }
-}
+
 /* Conteúdo principal (compensando o header fixo) */
 .content {
   margin-top: 100px; /* Espaço extra para não ficar colado no header */
@@ -199,18 +106,46 @@ select:focus {
   box-shadow: 0 0 5px rgba(49, 130, 206, 0.5);
   outline: none;
 }
-/* Botão de envio */
-button {
-  width: 100%;
-  padding: 9px;
-  font-size: 1.1em;
+.buttonenviar {
+  background: linear-gradient(135deg, #0077ff, #003366);
+  color: white;
   border: none;
-  border-radius: 18px;
-  background-color: #3182ce;
-  color: #fff;
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.buttonenviar:hover {
+  background: linear-gradient(135deg, #005fcc, #002244);
+}
+
+.select-button {
+  background-color: #4CAF50; /* verde suave */
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  margin: 15px 0;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+.select-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.select-button:active {
+  transform: scale(0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Lista de comércios */
 #business-list {
@@ -319,4 +254,97 @@ button {
 }
 .business-item .visit-button:hover {
   background: #2b6cb0;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+header {
+width: 100%;
+background: linear-gradient(135deg, rgba(0, 119, 255, 0.607), rgb(0, 0, 0));
+padding: 15px 30px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 1000;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+color: white;
+}
+
+.header-logo {
+display: flex;
+align-items: center;
+}
+
+.header-logo img {
+width: 48px;
+height: 48px;
+margin-right: 10px;
+}
+
+.header-logo span {
+font-size: 1.4rem;
+font-weight: 600;
+color: white;
+}
+
+nav {
+display: flex;
+gap: 20px;
+}
+
+nav a {
+color: white;
+text-decoration: none;
+font-weight: 500;
+transition: color 0.3s ease;
+}
+
+nav a:hover {
+color: #cce5ff;
+}
+
+.menu-toggle {
+display: none;
+background: none;
+border: none;
+color: white;
+font-size: 1.8rem;
+cursor: pointer;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+nav {
+display: none;
+position: absolute;
+top: 70px;
+right: 30px;
+background-color: rgba(0, 0, 0, 0.95);
+border-radius: 10px;
+flex-direction: column;
+padding: 20px;
+z-index: 1001;
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+nav a {
+padding: 10px 0;
+color: white;
+}
+
+nav.show {
+display: flex;
+}
+
+.menu-toggle {
+display: block;
+}
 }
