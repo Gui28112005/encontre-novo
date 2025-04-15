@@ -22,12 +22,11 @@ body {
   display: flex;
   flex-direction: column;
 }
-
 /* Header */
 header {
   width: 100%;
-  background: linear-gradient(135deg, rgba(0,119,255,0.85), rgba(0,0,0,0.7));
-  padding: 15px 40px;
+      background: linear-gradient(135deg, rgba(0, 119, 255, 0.607), rgb(0, 0, 0));
+  padding: 15px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,72 +34,82 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: white;
 }
+
+
 .header-logo {
   display: flex;
   align-items: center;
 }
+
 .header-logo img {
-  width: 50px;
-  margin-right: 15px;
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
 }
+
 .header-logo span {
-  font-size: 1.5em;
-  color: var(--white);
+  font-size: 1.4rem;
   font-weight: 600;
+  color: white;
 }
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  color: var(--white);
-  font-size: 1.5em;
-  cursor: pointer;
-}
+
 nav {
   display: flex;
   gap: 20px;
 }
+
 nav a {
-  color: var(--white);
-  padding: 8px 15px;
-  border: 2px solid var(--white);
-  border-radius: 25px;
-  transition: background 0.3s, color 0.3s;
-  text-decoration: none; /* Remove o underline */
-}
-nav a:hover {
-  background: var(--white);
-  color: var(--secondary-color);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-/* Responsividade */
+nav a:hover {
+  color: #cce5ff;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Responsivo */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-  /* Oculta o menu por padrão */
   nav {
     display: none;
-    flex-direction: column;
     position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 10px 0;
+    top: 140px;
+    right: 30px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 1001;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
   }
-  /* Exibe o menu quando a classe "show" for adicionada */
+
+  nav a {
+    padding: 10px 0;
+    color: rgb(255, 255, 255);
+  }
+
   nav.show {
     display: flex;
   }
-  nav a {
-    width: 95%;
-    margin: 5px auto;
-    text-align: center;
+
+  .menu-toggle {
+    display: block;
   }
 }
+
 
 /* Container centralizado */
 .container {
@@ -158,3 +167,180 @@ footer {
   border-radius: 8px;
   text-align: center;
 }
+      /* Estilos mais profissionais */
+      :root {
+        --primary-color: #007bff;
+        --secondary-color: #6c757d;
+        --light-gray: #f8f9fa;
+        --dark-gray: #343a40;
+        --text-color: #495057;
+        --font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        font-family: var(--font-family);
+        margin: 0;
+        padding: 0;
+        background-color: var(--light-gray);
+        color: var(--text-color);
+        line-height: 1.6;
+    }
+
+   
+
+
+    h1, h2, h3, h4 {
+        color: var(--dark-gray);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        margin-top: 1.5rem;
+    }
+
+    p {
+        margin-bottom: 1rem;
+        color: var(--text-color);
+    }
+
+    .info {
+        padding: 1.5rem;
+        background-color: var(--light-gray);
+        border-radius: 6px;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info i {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .info h3 {
+        margin-top: 0;
+    }
+
+    .info a {
+        color: var(--primary-color) !important;
+        text-decoration: underline !important;
+    }
+
+    .info h4 {
+        margin-top: 0.5rem;
+        font-weight: normal;
+        color: var(--secondary-color);
+    }
+
+    footer {
+        background-color: var(--dark-gray);
+        color: white;
+        padding: 2rem 2rem;
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+        color: var(--primary-color);
+    }
+
+    footer hr {
+        border-color: rgba(255, 255, 255, 0.2);
+        margin: 1.5rem 0;
+    }
+
+    footer strong {
+        color: var(--light-gray);
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    footer div[style*="display: flex"] {
+        justify-content: space-around;
+        margin-bottom: 1.5rem;
+    }
+
+    footer div[style*="flex-direction: column"] {
+        align-items: flex-start;
+    }
+
+    /* Media query para telas menores */
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        nav {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: rgb(0, 0, 0);
+            position: absolute;
+            top: 60px; /* Ajustar conforme a altura do header */
+            left: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        nav.active {
+            display: flex;
+        }
+
+        nav a {
+            padding: 1rem 2rem;
+            margin-left: 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        nav a:last-child {
+            border-bottom: none;
+        }
+
+        .container {
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        .info {
+            padding: 1rem;
+        }
+
+        footer div[style*="justify-content: space-between"] {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer div[style*="flex-direction: column"] {
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+    }
