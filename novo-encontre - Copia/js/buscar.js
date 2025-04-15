@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
   // Busca e exibe os detalhes dos comércios
-  fetch("https://encontreoficialback.azurewebsites.net/all-businesses-details")
+  fetch("http://localhost:8080/all-businesses-details")
     .then((response) => response.json())
     .then((data) => {
       // Remove skeleton loader
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // Busca e exibe o ranking dos avaliadores (pessoas que mais fizeram avaliações)
-  fetch("https://encontreoficialback.azurewebsites.net/all-users-details")
+  fetch("http://localhost:8080/all-users-details")
     .then((response) => response.json())
     .then((users) => {
       // Ordena os usuários: os que mais fizeram avaliações primeiro
@@ -180,18 +180,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 });
 
-// Controle do áudio de fundo
-document.addEventListener("DOMContentLoaded", function () {
-  const audio = document.getElementById("backgroundMusic");
-  audio.volume = 0.5; // Define o volume (0.0 a 1.0)
 
-  // Para garantir a reprodução automática em alguns navegadores
-  document.body.addEventListener("click", function () {
-    if (audio.paused) {
-      audio.play();
-    }
-  });
-});
 
 // Função para filtrar comércios pelo nome
 function filtrarComercios() {
@@ -203,3 +192,6 @@ function filtrarComercios() {
     row.style.display = nomeComercio.includes(input) ? "" : "none";
   });
 }
+window.toggleMenu = function () {
+  document.getElementById("nav").classList.toggle("show");
+};
