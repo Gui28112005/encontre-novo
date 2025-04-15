@@ -7,131 +7,6 @@ html, body {
   flex-grow: 1; /* Faz a container ocupar o espaço disponível */
 }
 
-.header {
-  width: 100%;
-  background: linear-gradient(135deg, rgba(0, 119, 255, 0.65), rgba(0, 0, 0, 0.85));
-  backdrop-filter: blur(6px);
-  padding: 15px 0; /* padding vertical, sem afastamento lateral */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-}
-
-    /* Estado escondido */
-    .header.hide-header {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-  
-    .header.show-header {
-      position: fixed;
-      transform: translateY(0);
-      opacity: 1;
-    }
-  
-    /* Logo e Nome */
-    .header-logo {
-        display: flex;
-        align-items: center;
-    }
-  
-    .header-icon {
-        width: 50px;
-        height: auto;
-        margin-right: 40px;
-    }
-  
-    /* Estilos para o logo fora do container */
-    .logo-container {
-        text-align: center; /* Centraliza o logo horizontalmente */
-        margin-top: 80px; /* Adiciona margem superior para espaçamento */
-    }
-  
-    .logo-container img {
-        width: 100px; /* Ajuste o tamanho do logo conforme necessário */
-        height: auto;
-    }
-  
-    .header-text {
-      font-size: 1.2em;
-      font-weight: 200;
-      color: #ffffff;
-      font-family: sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-/* Ajuste para o menu de navegação */
-.header-buttons {
-  display: flex;
-  gap: 20px;
-}
-
-.header-buttons button {
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  padding: 10px 25px;
-  border-radius: 25px;
-  font-size: 1em;
-  color: #ffffff;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-  white-space: nowrap; /* Evita que os botões quebrem para outra linha */
-}
-
-.header-buttons button:hover {
-  background-color: #ffffff;
-  color: #000000;
-  transform: translateY(-3px);
-}
-
-/* Botão de Menu (Hamburger) - Inicialmente oculto */
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  color: #ffffff;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-/* Responsividade - telas menores */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  /* Esconde os botões de navegação e exibe como menu lateral */
-  .header-buttons {
-    display: none;
-    position: absolute;
-    top: 60px; /* Ajuste conforme necessário */
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    flex-direction: column;
-    text-align: center;
-    padding: 10px 0;
-    z-index: 999;
-  }
-
-  /* Quando a classe 'show' for adicionada, exibe o menu */
-  .header-buttons.show {
-    display: flex;
-  }
-
-  .header-buttons button {
-    width: 90%;
-    margin: 5px auto;
-    padding: 12px;
-    font-size: 1.2em;
-  }
-}
 
     .container {
   max-width: 100%;
@@ -400,11 +275,7 @@ hr {
       transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
     }
   
-    .header-buttons button:hover {
-      background-color: #ffffff;
-      color: #000000;
-      transform: translateY(-3px);
-    }
+
   
     /* Botão de Menu (Hamburger) - inicialmente oculto */
     .menu-toggle {
@@ -540,6 +411,33 @@ hr {
     100% {
       background-position: 200% 0;
     }
+  }
+  .actions button {
+    padding: 8px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 2px;
+    transition: background 0.3s ease;
+  }
+  
+  .edit-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .edit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #a71d2a;
   }
   
 
