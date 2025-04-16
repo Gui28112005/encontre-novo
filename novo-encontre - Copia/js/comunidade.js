@@ -131,6 +131,15 @@ function loadRatedBusinesses() {
     });
 }
 
+
+
+  function toggleMenu() {
+    const nav = document.getElementById("nav");
+    nav.classList.toggle("show");
+  }
+
+
+
 // Ajuste para esconder/mostrar o cabeçalho conforme a rolagem da página
 document.addEventListener("DOMContentLoaded", function () {
   const header = document.querySelector(".header");
@@ -149,7 +158,4 @@ document.addEventListener("DOMContentLoaded", function () {
   loadRatedBusinesses();
 });
 
-function toggleMenu() {
-  const menu = document.querySelector(".header-buttons");
-  menu.classList.toggle("show");
-}
+
