@@ -180,8 +180,6 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 });
 
-
-
 // Função para filtrar comércios pelo nome
 function filtrarComercios() {
   const input = document.getElementById("searchInput").value.toLowerCase();
@@ -195,3 +193,25 @@ function filtrarComercios() {
 window.toggleMenu = function () {
   document.getElementById("nav").classList.toggle("show");
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btnVoltarAoInicio = document.getElementById("btnVoltarAoInicio");
+
+  // Exibe o botão quando o usuário rolar para fora do topo da página
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 0) {
+      // Exibe o botão quando o usuário rolar para fora do topo
+      btnVoltarAoInicio.style.display = "block";
+    } else {
+      btnVoltarAoInicio.style.display = "none"; // Esconde o botão quando estiver no topo
+    }
+  });
+
+  // Adiciona o evento de clique para rolar a página para o topo
+  btnVoltarAoInicio.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Rolagem suave
+    });
+  });
+});
