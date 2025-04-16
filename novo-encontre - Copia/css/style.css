@@ -313,12 +313,10 @@ body {
 /* Botões padronizados dentro dos cards */
 .comercio-links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Deixa os botões em grade */
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15px;
-  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Mínimo de 180px para cada botão */
+  gap: 20px;  /* Espaçamento entre os botões */
+  justify-items: center;  /* Centraliza os itens dentro da célula */
+  margin: 15px 0;
 }
 
 .btn-social {
@@ -329,8 +327,12 @@ body {
   transition: background 0.3s ease;
   text-align: center;
   color: white;
-  min-width: 100px;
+  min-width: 120px; /* Garante que os botões tenham uma largura mínima */
+  display: inline-block;
+  text-align: center;
+  width: 100%; /* Faz os botões ocuparem 100% da largura da célula no grid */
 }
+
 .btn-social:hover {
   opacity: 0.8;
 }
@@ -417,12 +419,13 @@ body {
 
     .btn-social {
       display: inline-block;
-      padding: 8px 15px;
+      display: grid;
+      padding: 12px 18px;
       margin: 5px;
-      background-color: #000000;
+      background-color: #008ddf;
       color: #fff;
       text-decoration: none;
-      border-radius:20px;
+      border-radius:10px;
       font-size: 14px;
       transition: background-color 0.3s ease;
     }
