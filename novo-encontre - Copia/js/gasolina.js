@@ -5,7 +5,7 @@ function toggleMenu() {
 
 async function loadFuelPrices() {
   try {
-    const response = await fetch("http://localhost:8080/fuel-prices");
+    const response = await fetch("https://encontreoficialback.azurewebsites.net/fuel-prices");
     const data = await response.json();
     const tableBody = document
       .getElementById("fuel-list")
