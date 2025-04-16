@@ -1318,11 +1318,35 @@ right: 0;
   margin-top: 20px;
   height: 200px; /* Altura mínima para centralizar */
 }
-
-
-
 .icone-alerta {
   font-size: 50px;
   margin-bottom: 10px;
   animation: pulse 1.2s infinite;
+}
+#btnVoltarAoInicio {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;  /* Definindo a largura do botão */
+  height: 50px; /* Definindo a altura do botão */
+  background-color: rgba(50, 50, 50, 0.7); /* Cor cinza escuro com transparência */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Deixa o botão circular */
+  font-size: 24px; /* Tamanho do ícone */
+  display: none; /* Inicialmente escondido */
+  z-index: 9999; /* Garante que o botão fique acima de outros elementos */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+  display: flex;
+  justify-content: center; /* Alinha o ícone no centro */
+  align-items: center; /* Alinha o ícone no centro */
+}
+
+#btnVoltarAoInicio:hover {
+  background-color: rgba(50, 50, 50, 0.9); /* Aumenta a opacidade quando passar o mouse */
+}
+
+#btnVoltarAoInicio i {
+  margin: 0; /* Remove margens extras ao redor do ícone */
 }
