@@ -46,7 +46,7 @@ document
     const estado = document.getElementById("estado").value;
 
     try {
-      const response = await fetch("http://localhost:8080/add-fuel-price", {
+      const response = await fetch("https://encontreoficialback.azurewebsites.net/add-fuel-price", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -83,7 +83,7 @@ async function editFuelPrice(id, currentPrice) {
   const normalizedPrice = newPrice.replace(",", ".");
 
   try {
-    const response = await fetch(`http://localhost:8080/fuel-price/${id}`, {
+    const response = await fetch(`https://encontreoficialback.azurewebsites.net/fuel-price/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ preco: normalizedPrice }),
@@ -124,7 +124,7 @@ function toggleMenu() {
 
 async function loadFuelPrices(cidade = "", estado = "") {
   try {
-    let url = "http://localhost:8080/fuel-prices"; //http://localhost:8080
+    let url = "https://encontreoficialback.azurewebsites.net/fuel-prices"; //http://localhost:8080
 
     // Construir query parameters corretamente
     const params = new URLSearchParams();
@@ -198,7 +198,7 @@ async function deleteFuelStation(id) {
   if (!confirm("Tem certeza que deseja excluir este posto?")) return;
 
   try {
-    const response = await fetch(`http://localhost:8080/fuel-station/${id}`, {
+    const response = await fetch(`https://encontreoficialback.azurewebsites.net/fuel-station/${id}`, {
       method: "DELETE",
     });
 
@@ -234,7 +234,7 @@ async function saveUserPost() {
   }
 
   try {
-    const response = await fetch("http://localhost:8080/add-fuel-price", {
+    const response = await fetch("https://encontreoficialback.azurewebsites.net/add-fuel-price", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
