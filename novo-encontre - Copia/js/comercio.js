@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
     const response = await fetch(
-      `https://encontreoficialback.azurewebsites.net/comercios/${comercioId}`
+      `${window.ENV.API_URL}/comercios/${comercioId}`
     );
     if (!response.ok) {
       console.error("Erro ao buscar comércio:", response.status);
