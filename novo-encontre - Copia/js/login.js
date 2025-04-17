@@ -54,14 +54,11 @@ loginForm.addEventListener("submit", async (e) => {
   loading.style.display = "block";
 
   try {
-    const response = await fetch(
-      "https://encontreoficialback.azurewebsites.net/api/usuarios/login",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, senha }),
-      }
-    );
+    const response = await fetch("${window.ENV.API_URL}/api/usuarios/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, senha }),
+    });
 
     const data = await response.json();
     loading.style.display = "none";
