@@ -4,7 +4,7 @@ function searchBusiness() {
   const businessList = document.getElementById("business-list");
   const evaluationContainer = document.getElementById("evaluation-container");
 
-  let url = "https://encontreoficialback.azurewebsites.net/search-business?";
+  let url = "${window.ENV.API_URL}/search-business?";
   if (searchTerm) {
     url += `nome=${encodeURIComponent(searchTerm)}`;
   }
@@ -23,7 +23,7 @@ function searchBusiness() {
             div.classList.add("business-item");
             div.innerHTML = `
               <strong>${item.nome}</strong>
-              <button onclick="selectBusiness('${item.nome}')">Selecionar</button>
+              <button class="select-button" onclick="selectBusiness('${item.nome}')">Selecionar</button>
             `;
             businessList.appendChild(div);
           });
@@ -79,7 +79,7 @@ document
       horario_pico: horario_pico,
     };
 
-    fetch("https://encontreoficialback.azurewebsites.net/rate-business", {
+    fetch("${window.ENV.API_URL}/rate-business", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(ratingData),
@@ -104,7 +104,7 @@ document
 
 // Função para carregar e exibir os comércios avaliados
 function loadRatedBusinesses() {
-  fetch("https://encontreoficialback.azurewebsites.net/get-rated-businesses")
+  fetch("${window.ENV.API_URL}/get-rated-businesses")
     .then((response) => response.json())
     .then((data) => {
       const ratedBusinesses = document.getElementById("rated-businesses");
@@ -131,14 +131,10 @@ function loadRatedBusinesses() {
     });
 }
 
-
-
-  function toggleMenu() {
-    const nav = document.getElementById("nav");
-    nav.classList.toggle("show");
-  }
-
-
+function toggleMenu() {
+  const nav = document.getElementById("nav");
+  nav.classList.toggle("show");
+}
 
 // Ajuste para esconder/mostrar o cabeçalho conforme a rolagem da página
 document.addEventListener("DOMContentLoaded", function () {
@@ -157,5 +153,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   loadRatedBusinesses();
 });
-
-
