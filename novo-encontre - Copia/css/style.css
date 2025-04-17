@@ -1350,3 +1350,21 @@ right: 0;
 #btnVoltarAoInicio i {
   margin: 0; /* Remove margens extras ao redor do ícone */
 }
+
+.privacy-alert {
+  background-color: #ffe9e9;
+  color: #cc0000;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #ffcccc;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
