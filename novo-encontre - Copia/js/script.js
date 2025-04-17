@@ -304,10 +304,14 @@ function getCookie(name) {
 
 function acceptPrivacy() {
   const checkbox = document.getElementById("privacyCheckbox");
+  const alertBox = document.getElementById("privacyAlert");
+
   if (!checkbox.checked) {
-    alert("Por favor, marque a caixa para aceitar a política de privacidade.");
+    alertBox.style.display = "block"; // Mostra o aviso
     return;
   }
+
+  alertBox.style.display = "none"; // Oculta se estiver visível
   setCookie("privacyAccepted", "true", 30);
   document.getElementById("privacyPopup").style.display = "none";
 }
