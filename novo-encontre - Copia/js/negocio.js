@@ -100,9 +100,7 @@ function mostrarEstatisticasComercio(comercio) {
 // Função para carregar o ranking e exibir os dados na tabela
 async function carregarRanking() {
   try {
-    const res = await fetch(
-      "https://encontreoficialback.azurewebsites.net/api/cliques/por-comercio"
-    );
+    const res = await fetch("${window.ENV.API_URL}/api/cliques/por-comercio");
     const data = await res.json();
     const tbody = document.getElementById("ranking-cliques");
     tbody.innerHTML = "";
