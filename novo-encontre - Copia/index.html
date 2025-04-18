@@ -12,7 +12,7 @@
      crossorigin="anonymous"></script>
 </head>
 <body>
-        <!-- Header -->
+       <!-- Header -->
         <header>
           <div class="header-logo">
             <img id="logo" src="./img/web_hi_res_512.png" alt="Logo">
@@ -30,18 +30,25 @@
           </nav>
       </header>
 <main>
-
-  
          <!-- Seção de Busca -->
          <section class="search">
 
           
           <div class="search-box">
             <input type="text" id="searchInput" placeholder="Digite aqui o nome comércio...">
+            
+            <!-- Primeiro botão -->
             <button onclick="performSearch()" class="search-btn">
               <i class="fas fa-search"></i>
-            </button>
-          </div>    
+            </button> 
+            <div class="tooltip-container">
+              <button onclick="performSearch()" class="search-btn">
+                <i class="fas fa-trash-alt"></i>
+              </button>
+              <span class="tooltip-text">Limpar busca</span>
+            </div>
+            
+          </div>  
           <div class="botoes-uteis-container">
             <button class="botao-util" onclick="window.location.href='emergencia.html'">
               Atendimento Veicular 24h
@@ -51,10 +58,8 @@
             </button>
           </div>
         </section>          
-                 <button id="btnVoltarAoInicio" class="btn-voltar">
-          <i class="fas fa-arrow-up"></i> <!-- Ícone de seta para cima -->
-        </button>
 
+        
           <section class="categories-container">
             <button class="nav-button prev" onclick="scrollCategorias(-1)">
               &lt;
@@ -120,13 +125,14 @@
           </section>
           <!-- Footer -->
     <!-- Banner do Evento (Compacto) -->
-    <div style="background: linear-gradient(135deg, rgba(0, 106, 255, 0.642), rgb(134, 134, 134)); padding: 10px 12px; margin-top: 10px; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <!-- <div style="background: linear-gradient(135deg, rgba(0, 106, 255, 0.642), rgb(134, 134, 134)); padding: 10px 12px; margin-top: 10px; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
       <a href="https://www.eventbrite.com.br/" target="_blank" style="text-decoration: none; color: inherit; display: inline-block; max-width: 500px; margin: 0 auto; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
         <h2 style="font-size: 18px; color: #ffffff; margin: 0;">Festa do Milho em agua vermelha!</h2>
         <p style="font-size: 14px; color: #ffffff; margin: 4px 0 0;">Neste fim de semana - Arte, cultura e diversão para todos!</p>
         <span style="display: inline-block; margin-top: 8px; padding: 4px 16px; background-color: #005ba5; color: #fff; font-weight: bold; font-size: 14px; border-radius: 7px;">Garanta seu ingresso</span>
       </a>
-    </div>
+    </div> -->
+
     <!-- Popup de Privacidade / Cookies -->
     <div id="privacyPopup" class="popup-overlay">
       <div class="popup-content">
@@ -159,18 +165,6 @@
         </div>        
     </section>
   </main>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1183660196592298"
-     crossorigin="anonymous"></script>
-<!-- Teste -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-1183660196592298"
-     data-ad-slot="2732160142"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
   <!-- Footer -->
   <footer style="background: linear-gradient(135deg, rgba(0, 119, 255, 0.607), rgb(0, 0, 0)); color: white; padding: 40px 20px;">
     <div style="max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
@@ -203,8 +197,8 @@
     </div>
   </footer>
 
-
   <script src="./js/script.js"></script>
+  <script src="./env.js"></script>
 </body>
 </html>
 
