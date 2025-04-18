@@ -1350,7 +1350,6 @@ right: 0;
 #btnVoltarAoInicio i {
   margin: 0; /* Remove margens extras ao redor do ícone */
 }
-
 .privacy-alert {
   background-color: #ffe9e9;
   color: #cc0000;
@@ -1366,5 +1365,40 @@ right: 0;
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-6px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-container .tooltip-text {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 6px 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%;
+  left: 90%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Tooltip aparece no hover (desktop) */
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Tooltip visível no toque (mobile) */
+.tooltip-container:active .tooltip-text {
+  visibility: visible;
+  opacity: 1;
 }
 
