@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
   // Busca e exibe os detalhes dos comércios
-  fetch("${window.ENV.API_URL}/all-businesses-details")
+  fetch(`${window.ENV.API_URL}/all-businesses-details`)
     .then((response) => response.json())
     .then((data) => {
       // Remove skeleton loader
@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
   // Busca e exibe o ranking dos avaliadores (pessoas que mais fizeram avaliações)
-  fetch("${window.ENV.API_URL}/all-users-details")
+  fetch(`${window.ENV.API_URL}/all-users-details`)
     .then((response) => response.json())
     .then((users) => {
       // Ordena os usuários: os que mais fizeram avaliações primeiro
