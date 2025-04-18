@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
       if (loading) loading.style.display = "flex";
 
-      let url = "https://encontreoficialback.azurewebsites.net/comercios";
+      let url = `${window.ENV.API_URL}/comercios`;
+
       if (categoria !== "todos") {
         url += `?categoria=${encodeURIComponent(categoria)}`;
       }
@@ -201,8 +202,16 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     if (!query) {
       renderComercios(allComercios);
+
+      // Verifica se o botão existe antes de tentar acessar o estilo
+      const clearSearchBtn = document.getElementById("clearSearchBtn");
+      if (clearSearchBtn) {
+        clearSearchBtn.style.display = "none";
+      }
+
       return;
     }
+
     const filtered = allComercios.filter(
       (comercio) =>
         (comercio.nome && comercio.nome.toLowerCase().includes(query)) ||
@@ -212,7 +221,22 @@ document.addEventListener("DOMContentLoaded", async () => {
           comercio.endereco.toLowerCase().includes(query)) ||
         (comercio.descricao && comercio.descricao.toLowerCase().includes(query))
     );
+
     renderComercios(filtered);
+
+    // Verifica se o botão existe antes de tentar acessar o estilo
+    const clearSearchBtn = document.getElementById("clearSearchBtn");
+    if (clearSearchBtn) {
+      clearSearchBtn.style.display = "inline-flex";
+    }
+
+    // Rolagem suave após a busca
+    if (comercioSection) {
+      comercioSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   };
 
   document.querySelectorAll(".category").forEach((category) => {
